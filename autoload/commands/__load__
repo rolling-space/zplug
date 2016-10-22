@@ -243,6 +243,7 @@ done
     do
         if [[ -f $pkg ]]; then
             source "$pkg"
+            { zcompile "$pkg" } &!
             if (( $status == 0 )); then
                 $is_verbose && \
                     __zplug::io::print::put \
@@ -271,6 +272,7 @@ done
     do
         if [[ -f $pkg ]]; then
             source "$pkg"
+            { zcompile "$pkg" } &!
             if (( $status == 0 )); then
                 if $is_verbose; then
                     __zplug::io::print::put "$fg[green]  Loaded$reset_color ${pkg#$ZPLUG_REPOS/}"

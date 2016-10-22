@@ -30,4 +30,5 @@ done
 rm -f \
     "$ZPLUG_CACHE_FILE" \
     "$ZPLUG_HOME/zcompdump" \
-    "$ZPLUG_HOME/zcompdump.zwc"
+    "$ZPLUG_HOME/zcompdump.zwc" \
+    $( __zplug::utils::shell::expand_glob "$ZPLUG_HOME/repos/**/*.zwc" )
