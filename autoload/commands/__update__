@@ -82,6 +82,8 @@ done
     do
         (( $#repo > $max )) && max=$#repo
     done
+
+    __zplug::core::core::run_interfaces 'clear'
 }
 
 __zplug::job::spinner::lock
